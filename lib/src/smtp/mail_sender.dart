@@ -33,8 +33,14 @@ class PersistentConnection {
             await client.close(_connection);
           }
           // task.completer.complete(null);
-          task.completer.complete(SendReport(
-              Message(), DateTime.now(), DateTime.now(), DateTime.now()));
+          task.completer.complete(
+            SendReport(
+              Message(),
+              DateTime.now(),
+              DateTime.now(),
+              DateTime.now(),
+            ),
+          );
           return;
         }
 
