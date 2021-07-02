@@ -32,7 +32,9 @@ class PersistentConnection {
           if (_connection != null) {
             await client.close(_connection);
           }
-          task.completer.complete(null);
+          // task.completer.complete(null);
+          task.completer.complete(SendReport(
+              Message(), DateTime.now(), DateTime.now(), DateTime.now()));
           return;
         }
 
